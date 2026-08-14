@@ -3,7 +3,7 @@
 <html lang="en">
 <head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>index</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>homework3</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
     pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -7811,7 +7811,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pulp</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pp</span>
@@ -7837,7 +7837,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># set up the model</span>
@@ -7864,7 +7864,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># supervit variable</span>
@@ -7903,7 +7903,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># cost of each SuperVit tab</span>
@@ -7942,10 +7942,12 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="c1"># SUBJECT TO:</span>
+<div class="highlight hl-python"><pre><span></span><span class="c1"># set up constraints</span>
+
+<span class="c1"># SUBJECT TO:</span>
 <span class="n">C1</span><span class="o">=</span> <span class="n">pp</span><span class="o">.</span><span class="n">LpConstraint</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'VitC'</span><span class="p">,</span>
                     <span class="n">e</span><span class="o">=</span> <span class="mi">20</span><span class="o">*</span><span class="n">SuperVit</span> <span class="o">+</span> <span class="mi">30</span><span class="o">*</span><span class="n">NewHealth</span><span class="p">,</span>
                     <span class="n">rhs</span> <span class="o">=</span> <span class="mi">60</span><span class="p">,</span>
@@ -7987,11 +7989,12 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">model</span> <span class="o">+=</span> <span class="n">obj_func</span>
-<span class="n">model</span> <span class="o">+=</span> <span class="n">C1</span>
+<div class="highlight hl-python"><pre><span></span><span class="c1"># build model</span>
+<span class="n">model</span> <span class="o">+=</span> <span class="n">obj_func</span>   <span class="c1"># add obj function</span>
+<span class="n">model</span> <span class="o">+=</span> <span class="n">C1</span>   <span class="c1"># add constraints</span>
 <span class="n">model</span> <span class="o">+=</span> <span class="n">C2</span>
 <span class="n">model</span> <span class="o">+=</span> <span class="n">C3</span>
 <span class="n">model</span> <span class="o">+=</span> <span class="n">C4</span>
@@ -8017,7 +8020,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># model.solve()</span>
@@ -8032,7 +8035,7 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[21]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
 <pre>1</pre>
 </div>
@@ -8056,15 +8059,16 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="s2">"Model Status"</span><span class="p">,</span><span class="n">pp</span><span class="o">.</span><span class="n">LpStatus</span><span class="p">[</span><span class="n">model</span><span class="o">.</span><span class="n">status</span><span class="p">]</span>
+<div class="highlight hl-python"><pre><span></span><span class="c1"># get values</span>
+<span class="s2">"Model Status"</span><span class="p">,</span><span class="n">pp</span><span class="o">.</span><span class="n">LpStatus</span><span class="p">[</span><span class="n">model</span><span class="o">.</span><span class="n">status</span><span class="p">]</span>
 <span class="n">Optimal_Decision</span><span class="o">=</span><span class="p">{</span><span class="s2">"Optimal Solution - Minimal Spending"</span><span class="p">:</span><span class="n">pp</span><span class="o">.</span><span class="n">value</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">objective</span><span class="p">)}</span>
 <span class="n">Optimal_Decision</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">v</span><span class="o">.</span><span class="n">name</span><span class="p">:</span> <span class="n">v</span><span class="o">.</span><span class="n">varValue</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">variables</span><span class="p">()})</span>
 <span class="n">Optimal_Decision</span>
 
-
+<span class="c1"># table</span>
 <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">Optimal_Decision</span><span class="p">,</span><span class="n">orient</span><span class="o">=</span><span class="s1">'index'</span><span class="p">,</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'info'</span><span class="p">])</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="s1">'</span><span class="si">{:,.2f}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -8076,9 +8080,9 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
-<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[22]:</div>
+<div class="jp-OutputPrompt jp-OutputArea-prompt">Out[23]:</div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/html" tabindex="0">
-<div class="colab-df-container" id="df-fcd309ea-e442-4fd7-9ee7-99e7c30d4d3a">
+<div class="colab-df-container" id="df-1715f3bc-9928-4dc8-ba4d-57dc09ae9cd5">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -8118,7 +8122,7 @@ a.anchor-link {
 </div>
 <div class="colab-df-buttons">
 <div class="colab-df-container">
-<button class="colab-df-convert" onclick="convertToInteractive('df-fcd309ea-e442-4fd7-9ee7-99e7c30d4d3a')" style="display:none;" title="Convert this dataframe to an interactive table.">
+<button class="colab-df-convert" onclick="convertToInteractive('df-1715f3bc-9928-4dc8-ba4d-57dc09ae9cd5')" style="display:none;" title="Convert this dataframe to an interactive table.">
 <svg height="24px" viewbox="0 -960 960 960" xmlns="http://www.w3.org/2000/svg">
 <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"></path>
 </svg>
@@ -8165,12 +8169,12 @@ a.anchor-link {
   </style>
 <script>
       const buttonEl =
-        document.querySelector('#df-fcd309ea-e442-4fd7-9ee7-99e7c30d4d3a button.colab-df-convert');
+        document.querySelector('#df-1715f3bc-9928-4dc8-ba4d-57dc09ae9cd5 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-fcd309ea-e442-4fd7-9ee7-99e7c30d4d3a');
+        const element = document.querySelector('#df-1715f3bc-9928-4dc8-ba4d-57dc09ae9cd5');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
